@@ -1,0 +1,664 @@
+body {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+
+/*header*/
+
+.l-container {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.main-header {
+    height: 4rem;
+    border-bottom: 5px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    font-size: 22px;
+}
+
+.main-menu__link:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.main-menu__link {
+    padding: 10px;
+    color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.main-header__block {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+}
+
+.main-menu li {
+    padding: 0 20px;
+}
+
+.main-logo {
+    height: 3rem;
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+@media screen and ( max-width: 768px) {
+    .main-menu__item {
+        padding: .5rem 0 .5rem 1rem
+    }
+    .main-menu__link {
+        color: white;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+    .main-menu__link:hover {
+        background-color: lightslategray;
+        border-radius: 5px;
+    }
+    .main-nav {
+        position: fixed;
+        height: calc(100vh - 4rem);
+        width: 80wh;
+        background: rgba(0, 0, 0, 0.3);
+        top: 4.3rem;
+        right: -80vw;
+    }
+    .main-menu {
+        flex-direction: column;
+    }
+    .main-menu li {
+        padding: 10px 0;
+    }
+    .show {
+        right: 0px;
+    }
+    .main-menu-toggle {
+        width: 2.4rem;
+        height: 1.6rem;
+        background: linear-gradient(black 20%, transparent 20%, transparent 40%, black 40%, black 60%, transparent 60%, transparent 80%, black 80%);
+        cursor: pointer;
+    }
+}
+
+header img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.letra1 {
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transform: scale(1);
+    position: absolute;
+    top: 250px;
+    left: -1000px;
+    animation-name: letra1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra1 {
+    100% {
+        left: 0;
+    }
+}
+
+
+/* responsive*/
+
+@media screen and (max-width:767px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+    #slides {
+        height: 100px;
+    }
+    .icono-mototaxi {
+        margin: 0 120px;
+    }
+    .item {
+        margin: 5px 0;
+    }
+    .letra1,
+    .letra2,
+    .letra3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (width:768px) {
+    .letra1 {
+        position: relative;
+        top: 250px;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (width:1024px) {
+    .letra1 {
+        position: relative;
+        top: 450px;
+        padding: 30px 0;
+    }
+}
+
+
+/*****slider*******************/
+
+.slider {
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slider ul {
+    padding: 0px;
+    width: 400%;
+    display: flex;
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease-in;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -16px;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .slider {
+        height: 600px;
+    }
+}
+
+
+/*-------------------------------------------------------------------------------*/
+
+
+/* section*/
+
+section {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "servicios servicios" "conductores respetamos" "puntualidad recojemos";
+    line-height: 25px;
+}
+
+.servicios {
+    grid-area: servicios;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.conductores {
+    grid-area: conductores;
+    border: 1px solid lightcoral;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+    transition: 1s;
+}
+
+.conductores:hover {
+    -webkit-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    -moz-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+}
+
+.respetamos {
+    grid-area: respetamos;
+    border: 1px solid lightcoral;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    transition: 1s;
+}
+
+.respetamos:hover {
+    -webkit-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    -moz-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+}
+
+.puntualidad {
+    grid-area: puntualidad;
+    border: 1px solid lightcoral;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    transition: 1s;
+}
+
+.puntualidad:hover {
+    -webkit-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    -moz-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+}
+
+.recojemos {
+    grid-area: recojemos;
+    border: 1px solid lightcoral;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+    transition: 1s;
+}
+
+.recojemos:hover {
+    -webkit-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    -moz-box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+    box-shadow: 0px 2px 23px -3px rgba(247, 91, 112, 1);
+}
+
+section h3 {
+    font-size: 25px;
+}
+
+
+/*responsive*/
+
+@media screen and (max-width:768px) {
+    section {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "servicios" "conductores" "respetamos" "puntualidad" "recojemos";
+    }
+}
+
+
+/*aside*/
+
+aside .caracteristicas {
+    filter: brightness(1.2);
+    border-radius: 80px 160px 80px 160px;
+}
+
+aside {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: auto auto auto;
+    line-height: 25px;
+}
+
+aside div:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+aside div:nth-child(2) {
+    padding: 20px 20px;
+    margin: 20px;
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+aside div:nth-child(3) {
+    padding: 20px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid lightcoral;
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+aside div:nth-child(4) {
+    padding: 20px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid lightcoral;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+aside div:nth-child(5) {
+    padding: 20px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid lightcoral;
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+aside img {
+    width: 100%;
+}
+
+aside .protocolos-img {
+    border-radius: 10px;
+}
+
+.moto {
+    opacity: 0;
+    -webkit-transform: translateX(-600px);
+    transform: translateX(-600px);
+}
+
+.animate {
+    -webkit-animation: appear 0.5s forwards;
+    animation: appear 1s forwards;
+}
+
+@-webkit-keyframes appear {
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+/* div*/
+
+.titulo-caracteristicas {
+    margin: auto;
+    padding: 25px 0;
+    width: 80%;
+    background-color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.titulo-caracteristicas h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+/* responsive */
+
+@media screen and (max-width:768px) {
+    aside {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    aside div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    aside div:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    aside div:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    aside div:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    aside div:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    .caracteristicas {
+        width: 90%;
+        display: block;
+        margin: auto;
+        border-top: none;
+    }
+}
+
+
+/*******************footer********************/
+
+footer {
+    background-color: #878585;
+    padding: 20px 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: auto;
+    grid-template-areas: "contactanos-footer imagen-footer valores-footer";
+    font-size: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+.contactanos-footer {
+    grid-area: contactanos-footer;
+    padding: 0 20px;
+}
+
+.contactanos-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.imagen-footer {
+    grid-area: imagen-footer;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    padding: 0 50px;
+}
+
+.imagen-footer img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.valores-footer {
+    grid-area: valores-footer;
+}
+
+.valores-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valores-footer ol {
+    padding: 0;
+    font-weight: bold;
+}
+
+
+/*responsive footer*/
+
+@media screen and (max-width:768px) {
+    footer {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "contactanos-footer" "imagen-footer" "valores-footer";
+    }
+    .imagen-footer {
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        border-left: none;
+        border-right: none;
+        padding: 20px 0;
+    }
+}
+
+
+/* body*****************************************/
+
+@media screen and (max-width:768px) {
+    .servicios {
+        font-size: 25px;
+    }
+    .titulo-caracte {
+        font-size: 25px;
+    }
+}
+
+
+/*social*/
+
+.social .fab {
+    width: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.social {
+    position: fixed;
+    z-index: 50000;
+    left: -40px;
+    top: 250px;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+    padding-right: 30px;
+    padding-left: 20px;
+    z-index: 100;
+    transition: 0.1s ease;
+}
+
+.social .fa-facebook-f {
+    background: #3b5998;
+}
+
+.social .fa-facebook-messenger {
+    background: #0084ff;
+}
+
+.social .fa-whatsapp {
+    background: #25d366;
+}
+
+.social a:hover {
+    padding: 10px 45px;
+}
+
+@media screen and (max-width:760px) {
+    .social .fa-facebook-f {
+        background: #3b5998;
+        opacity: 0.7;
+    }
+    .social .fa-facebook-messenger {
+        background: #0084ff;
+        opacity: 0.7;
+    }
+    .social .fa-whatsapp {
+        background: #25d366;
+        opacity: 0.7;
+    }
+    .social {
+        top: 400px;
+    }
+}

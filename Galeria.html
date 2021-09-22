@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="galeria.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Galeria de mototaxis</title>
+</head>
+
+<body>
+
+    <div class="main-header">
+        <div class="l-container main-header__block">
+            <img class="main-logo" src="servicio-mototaxi.jpg" alt="">
+            <div class="main-menu-toggle" id="main-menu-toggle"></div>
+            <nav class="main-nav" id="main-nav">
+                <ul class="main-menu">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="index.html">
+                              Inicio
+                           </a>
+                    </li>
+
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="Nosotros.html">
+                            Nosotros
+                         </a>
+                    </li>
+
+
+
+
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="Servicios.html">
+                           Servicios
+                         </a>
+                    </li>
+
+
+
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="Galeria.html">
+                          Galeria
+                        </a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="social">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/Servicios-de-mototaxis-Villa-El-Salvador-656804414933946/?modal=admin_todo_tour" target="_blank" class="fab fa-facebook-f"></a>
+            </li>
+
+            <li>
+                <a href="https://m.me/profile.php?id=100052757916837" target="_blank" class="fab fa-facebook-messenger"></a>
+            </li>
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=51937295302&text=Hola%20Estimado" target="_blank" class="fab fa-whatsapp"></a>
+            </li>
+
+        </ul>
+    </div>
+
+    <section>
+        <h1>Galeria de Imagenes</h1>
+        <ul class="galeria">
+            <li>
+                <a href="#img1"><img src="galeria-moto1.jpg" alt="mototaxis-galeria"></a>
+            </li>
+            <li>
+                <a href="#img2"><img src="protocolo-covid2.jpeg" alt="protector-mototaxis"></a>
+            </li>
+            <li>
+                <a href="#img3"><img src="galeria-moto2.jpg" alt="mototaxis-galeria2"></a>
+            </li>
+            <li>
+                <a href="#img4"><img src="galeria-protector.jpg" alt="protector-anticovid"></a>
+            </li>
+            <li>
+                <a href=""><img src="mototaxis-calidad.jpg" alt="mototaxis-calidad"></a>
+            </li>
+        </ul>
+
+        <div class="modal" id="img1">
+            <h3>Imagen 1</h3>
+            <div class="imagen">
+                <a href="">&#60</a>
+                <a href=""><img src="galeria-moto1.jpg" alt=""></a>
+                <a href="#img2">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img2">
+            <h3>Imagen 2</h3>
+            <div class="imagen">
+                <a href="#img1">&#60</a>
+                <a href=""><img src="protocolo-covid2.jpeg" alt=""></a>
+                <a href="#img3">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img3">
+            <h3>Imagen 3</h3>
+            <div class="imagen">
+                <a href="#img2">&#60</a>
+                <a href=""><img src="galeria-moto2.jpg" alt=""></a>
+                <a href="#img4">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+
+
+        <div class="modal" id="img4">
+            <h3>Imagen 4</h3>
+            <div class="imagen">
+                <a href="#img3">&#60</a>
+                <a href=""><img src="galeria-protector.jpg" alt=""></a>
+                <a href="#img5">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img5">
+            <h3>Imagen 4</h3>
+            <div class="imagen">
+                <a href="#img4">&#60</a>
+                <a href=""><img src="mototaxis-calidad.jpg" alt=""></a>
+                <a href="#img1">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contactanos-footer">
+            <ul>
+                <li><span>Celular: </span>937295302</li>
+                <li><span>Correo: </span>MototaxisVillaSalvador2020@gmail.com</li>
+                <li><span>Servicio: </span>Para todo Villa el Salvador</li>
+            </ul>
+        </div>
+
+        <div class="imagen-footer">
+            <img src="servicio-mototaxi.jpg" alt="servicio-mototaxi">
+        </div>
+
+        <div class="valores-footer">
+            <ul>
+                <ol>Eligenos!!!</ol>
+                <li>Puntualidad</li>
+                <li>Seguridad</li>
+                <li>Responsabilidad</li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const showMenu = (toggleId, navId) => {
+            const toggle = document.getElementById(toggleId),
+                nav = document.getElementById(navId)
+
+            if (toggle && nav) {
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('show')
+                })
+            }
+        }
+        showMenu('main-menu-toggle', 'main-nav')
+    </script>
+
+
+
+
+
+</body>
+
+</html>
